@@ -17,41 +17,63 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="GreenBackground" translatesAutoresizingMaskIntoConstraints="NO" id="iOD-Eo-AYC">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="GreenBackground" translatesAutoresizingMaskIntoConstraints="NO" id="iOD-Eo-AYC">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DiceOne" translatesAutoresizingMaskIntoConstraints="NO" id="eXr-MK-KZq">
                                 <rect key="frame" x="244" y="384" width="120" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DiceeLogo" translatesAutoresizingMaskIntoConstraints="NO" id="XPY-sa-JQe">
                                 <rect key="frame" x="87" y="155" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DiceOne" translatesAutoresizingMaskIntoConstraints="NO" id="UYk-aO-AdW">
                                 <rect key="frame" x="55" y="384" width="120" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="lv4-zR-F9N"/>
+                                </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Z5-Kf-tF6">
                                 <rect key="frame" x="154" y="586" width="107" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.49947243930000002" green="0.081423290070000001" blue="0.091027311979999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="agM-LP-fz6"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Roll">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="rollButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yy9-XN-GGh"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="iOD-Eo-AYC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0IU-Lr-L0S"/>
-                            <constraint firstItem="iOD-Eo-AYC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="B3g-Da-kFq"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="iOD-Eo-AYC" secondAttribute="bottom" id="UDb-U3-JMD"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iOD-Eo-AYC" secondAttribute="trailing" id="yUa-mP-k0n"/>
+                            <constraint firstItem="iOD-Eo-AYC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1Wm-FF-sYR"/>
+                            <constraint firstItem="XPY-sa-JQe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="1y6-Wj-4rq"/>
+                            <constraint firstItem="UYk-aO-AdW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="55" id="53h-Xc-Ycf"/>
+                            <constraint firstItem="UYk-aO-AdW" firstAttribute="top" secondItem="eXr-MK-KZq" secondAttribute="top" id="7Uv-po-Jzi"/>
+                            <constraint firstItem="iOD-Eo-AYC" firstAttribute="centerX" secondItem="XPY-sa-JQe" secondAttribute="centerX" id="8Fq-bp-0l2"/>
+                            <constraint firstItem="5Z5-Kf-tF6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="154" id="BVG-jn-NTJ"/>
+                            <constraint firstItem="5Z5-Kf-tF6" firstAttribute="top" secondItem="eXr-MK-KZq" secondAttribute="bottom" constant="74" id="Bhh-5O-Iwv"/>
+                            <constraint firstItem="UYk-aO-AdW" firstAttribute="bottom" secondItem="eXr-MK-KZq" secondAttribute="bottom" id="DzJ-Ho-BK8"/>
+                            <constraint firstItem="iOD-Eo-AYC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-48" id="E24-k7-U48"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eXr-MK-KZq" secondAttribute="trailing" constant="50" id="K1p-3Q-SrZ"/>
+                            <constraint firstItem="XPY-sa-JQe" firstAttribute="centerX" secondItem="5Z5-Kf-tF6" secondAttribute="centerX" id="Myg-G9-2pP"/>
+                            <constraint firstItem="XPY-sa-JQe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="107" id="QHt-J1-CEJ"/>
+                            <constraint firstItem="iOD-Eo-AYC" firstAttribute="centerY" secondItem="eXr-MK-KZq" secondAttribute="centerY" id="giP-gQ-orU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5Z5-Kf-tF6" secondAttribute="bottom" constant="221" id="k5c-Am-xdu"/>
+                            <constraint firstItem="iOD-Eo-AYC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pXk-fn-whF"/>
+                            <constraint firstItem="eXr-MK-KZq" firstAttribute="leading" secondItem="UYk-aO-AdW" secondAttribute="trailing" constant="69" id="pf2-xn-OKV"/>
+                            <constraint firstItem="iOD-Eo-AYC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="yZM-Vb-Gs2"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="diceImageView1" destination="UYk-aO-AdW" id="tPL-YP-jOX"/>
+                        <outlet property="diceImageView2" destination="eXr-MK-KZq" id="ei1-P7-LaC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
